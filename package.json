@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
+    "start": "webpack serve",
+    "build": "webpack",
     "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./src",
     "lint": "pnpm run lint:style && pnpm run lint:script"
@@ -15,11 +17,13 @@
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
     "@babel/preset-env": "^7.23.7",
+    "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
@@ -48,7 +52,8 @@
     "stylelint-prettier": "^5.0.0",
     "webpack": "^5.89.0",
     "webpack-bundle-analyzer": "^4.10.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts}": [
