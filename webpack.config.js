@@ -24,7 +24,8 @@ module.exports = {
   devServer: {
     // 本地服务器配置
     hot: true,
-    open: true
+    open: true,
+    historyApiFallback: { index: "/index.html" }
   },
   module: {
     rules: [
