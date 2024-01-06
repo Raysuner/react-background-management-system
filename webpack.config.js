@@ -18,13 +18,13 @@ module.exports = {
     alias: {
       "@": path.resolve(__dirname, "src") // @ === src
     },
-    extensions: [".tsx", ".ts"] // 在引入这些类型的文件不需要携带后缀
+    extensions: [".ts", ".tsx", "..."] // tsx?后缀文件可以不写后缀，其它的文件类型默认带上文件后缀
   },
   // externals: [{ lodash: "_" }, { React: "React" }, { "react-dom": "ReactDOM" }],
   devServer: {
     // 本地服务器配置
     hot: true,
-    open: false
+    open: true
   },
   module: {
     rules: [
