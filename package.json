@@ -54,7 +54,7 @@
     "**/*.{js,jsx,tsx,ts}": [
       "pnpm run lint:script"
     ],
-    "**/*.{scss,sass}": [
+    "**/*.{scss,sass,css}": [
       "pnpm run lint:style"
     ]
   }

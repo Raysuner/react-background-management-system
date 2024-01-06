@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin =
@@ -28,12 +29,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(s(a|c)|c)ss$/, // 支持sass、scss、css
+        test: /\.((s(a|c))|c)ss$/, // 支持sass、scss、css
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.tsx?$/, // 支持tsx
-        exclude: /node_modules/,
         use: "babel-loader",
       },
     ],
