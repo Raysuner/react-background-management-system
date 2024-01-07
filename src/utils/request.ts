@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getToken } from "./token";
+import { getStorageValue } from "./storage";
 import { showLoading, hideLoading } from "./loading";
 
 const axiosInstance = axios.create({
@@ -10,7 +10,7 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config) => {
     showLoading();
-    const token = getToken("token");
+    const token = getStorageValue("token");
     if (token) {
       config.headers.setAuthorization(token);
     }

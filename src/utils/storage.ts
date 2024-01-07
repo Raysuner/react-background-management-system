@@ -1,4 +1,4 @@
-export function getToken(key: string) {
+export function getStorageValue(key: string) {
   try {
     const value = window.localStorage.getItem(key);
     return value;
@@ -7,6 +7,6 @@ export function getToken(key: string) {
   }
 }
 
-export function setToken(key: string, value: string) {
+export function setStorageValue(key: string, value: string) {
   window.localStorage.setItem(key, value);
 }
