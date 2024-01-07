@@ -12,7 +12,7 @@ axiosInstance.interceptors.request.use(
     showLoading();
     const token = getToken("token");
     if (token) {
-      config.headers.Authorization = token;
+      config.headers.setAuthorization(token);
     }
     return config;
   },

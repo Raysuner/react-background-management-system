@@ -13,6 +13,7 @@ export function showLoading() {
 }
 
 export function hideLoading() {
+  if (requestCount < 0) return;
   if (--requestCount === 0) {
     const loading = document.querySelector("#loading");
     if (loading) {
