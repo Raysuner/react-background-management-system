@@ -1,13 +1,17 @@
-import { createBrowserRouter } from "react-router-dom";
-import Home from "../pages/Home";
-import Forbidden403 from "../pages/Forbidden403";
-import NotFound404 from "../pages/NofFound404";
-import { Navigate } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
+import Home from "@/pages/Home";
+import Forbidden403 from "@/pages/Forbidden403";
+import NotFound404 from "@/pages/NofFound404";
+import Login from "@/pages/Login";
 
 const router = [
   {
     path: "/",
     element: <Home />
+  },
+  {
+    path: "/login",
+    element: <Login />
   },
   {
     path: "/403",

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "target": "es5" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "lib": [
       "DOM",
       "ESNext"
@@ -15,7 +15,10 @@
     "skipLibCheck": false /* Skip type checking all .d.ts files. */,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "public/*": ["public/*"]
     }
-  }
+  },
+  "files": ["src/index.d.ts"],
+  "include": ["src/**/*.ts",  "src/**/*.tsx",]
 }

@@ -16,7 +16,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src") // @ === src
+      "@": path.resolve(__dirname, "src"), // @ === src
+      public: path.resolve(__dirname, "public")
     },
     extensions: [".ts", ".tsx", "..."] // tsx?后缀文件可以不写后缀，其它的文件类型默认带上文件后缀
   },
@@ -36,6 +37,14 @@ module.exports = {
       {
         test: /\.tsx?$/, // 支持tsx
         use: "babel-loader"
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        type: "asset/resource"
+      },
+      {
+        test: /svg/,
+        type: "asset/source"
       }
     ]
   },
