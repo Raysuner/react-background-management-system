@@ -1,6 +1,29 @@
 .login-page-container {
+  position: relative;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  .login-container {
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    box-sizing: border-box;
+    width: 500px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    transform: translateY(-50%);
+
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .login-info {
+      margin-top: 20px;
+    }
+  }
 }
