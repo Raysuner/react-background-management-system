@@ -4,8 +4,8 @@ import { showLoading, hideLoading } from './loading';
 
 // 创建axios实例
 const requestInstance: AxiosInstance = axios.create({
-  baseURL: '/api', // api的base_url
-  timeout: 5000, // 请求超时时间
+  baseURL: 'http://localhost:5173/api', // api的base_url
+  timeout: 2000, // 请求超时时间
   withCredentials: true,
 });
 
@@ -13,7 +13,7 @@ const requestInstance: AxiosInstance = axios.create({
 requestInstance.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     // 在发送请求之前做些什么
-    showLoading();
+    // showLoading();
     const token = localStorage.getItem('token');
     if (token) {
       config.headers.set('Authorization', `Bearer ${token}`);

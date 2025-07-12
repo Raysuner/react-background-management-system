@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, Card, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import * as api from '@/api';
 import './index.less';
 
 interface LoginForm {
@@ -11,9 +12,10 @@ interface LoginForm {
 const LoginPage: React.FC = () => {
   const [form] = Form.useForm();
 
-  const onFinish = (values: LoginForm) => {
+  const onFinish = async (values: LoginForm) => {
     // 这里处理登录逻辑
-    console.log('登录信息:', values);
+    const res = await api.register(values);
+    console.log(res);
     message.success('登录成功！');
   };
 
